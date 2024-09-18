@@ -1,3 +1,5 @@
+Loadstring: loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
+
 WattyhubPrestiged is the continued version of Wattyhub for the few GRG exploiters left I will be adding onto this as I feel alongside saying what will be added next
 
 Soon to be added will be listed below
