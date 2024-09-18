@@ -1,8 +1,8 @@
 local version = game:HttpGet("https://raw.githubusercontent.com/Wattville/Watty-Hub-Public/main/version")
 local ESP = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/ArchivedLibs/esp.lua'),true))()
-local ui = loadstring(game:HttpGet("https://pastebin.com/raw/NV63xPd1"))()
-local uiTheme = loadstring(game:HttpGet("https://pastebin.com/raw/G1f8fGJ6"))()
-local uiSaveManager = loadstring(game:HttpGet("https://pastebin.com/raw/53138b5g"))()
+local ui = loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/ArchivedLibs/UI.lua"))()
+local uiTheme = loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/ArchivedLibs/UITheme.lua"))()
+local uiSaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/ArchivedLibs/uiSaveManager.lua"))()
 
 local lplr = game:GetService("Players").LocalPlayer
 local wksp = game:GetService("Workspace")
