@@ -18,6 +18,20 @@ local mouse = lplr:GetMouse()
 local farmingstats = lplr.leaderstats.Money.Value
 
 
+-- Farmkart locals
+local Player = Players.LocalPlayer
+local BuyKart = Workspace:WaitForChild("BarbStores"):WaitForChild("FarmKart"):WaitForChild("CustomerSeat")
+local Karts = Workspace:WaitForChild("Karts")
+local RiceFolder = Workspace:WaitForChild("Rice")
+local RemoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
+
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+
+
+
 if not LPH_OBFUSCATED then
     LPH_NO_VIRTUALIZE = function(...) return (...) end;
     LPH_JIT_MAX = function(...) return (...) end;
@@ -648,18 +662,68 @@ local fishingtool local autofishiesplaceholder local autofishplaceholder local a
 task.spawn(function() LPH_NO_VIRTUALIZE(function()
     while true do wait(0.2)
         if autofarmkart then
-            for _,rice in pairs(wksp.Rice:GetChildren()) do
-                if rice and rice:FindFirstChild("PhysicalRice") and rice:FindFirstChild("PhysicalRice"):FindFirstChild("Middle") then
-                    if lplr.Team.Name ~= "Leader" or CheckPlayer(lplr) == false then break end
-                    if wksp.Stores.FishingNet.CustomerSeats:FindFirstChild("1") == nil and wksp.Stores.FishingNet.Buttons:FindFirstChild("1") then
-                        lplr.Character.Humanoid.Jump = true
-                        wait(1)
-                        Teleport(CFrame.new(wksp.Stores.FishingNet.Buttons:FindFirstChild("1").Button.Position + Vector3.new(5,5,0)))
-                        wait(5)
-                        fireproximityprompt(wksp.Stores.FishingNet.Buttons:FindFirstChild("1").Button.ProximityPrompt, 1)
-                        wait(3)
-                        fishingtool = "Basic Fishing Net"
-                    end
+--// Get Tool \\--
+function GetTool(Name)
+    local Tool = Player.Character and Player.Character:FindFirstChild(Name) or Player.Backpack:FindFirstChild(Name)
+    if Tool and Player.Character then
+        Tool.Parent = Player.Character
+        task.wait()
+        return Tool
+    end
+end
+
+--// Get Rice \\--
+function GetRice()
+    for _, Rice in next, RiceFolder:GetChildren() do
+        local Model = Rice:FindFirstChildOfClass("Model")
+        if Model and Model.PrimaryPart and Rice:FindFirstChild("Health") and Rice.Health.Value > 0 and Rice:FindFirstChild("Reward") and Rice.Reward.Value > 0 then
+            return Rice, Model.PrimaryPart
+        end
+    end
+end
+
+--// Use Kart \\--
+function UseKart(Kart)
+    task.wait()
+    if Kart.Name == Player.Name then
+        -- Sickles
+        local Sickles = {Kart:WaitForChild("LeftSickle"), Kart:WaitForChild("RightSickle")}
+        -- Farm Rice
+        while Kart.Parent == Karts and task.wait() do
+            -- Sit
+            if Kart:FindFirstChild("VehicleSeat") and Kart.VehicleSeat.Occupant ~= Player.Character.Humanoid then
+                Kart.VehicleSeat:Sit(Player.Character.Humanoid)
+            end
+            -- Rice
+            local Rice, Part = GetRice()
+            if Rice and Kart.PrimaryPart then
+                Kart:SetPrimaryPartCFrame(Part.CFrame * CFrame.new(0, 5, -3))
+                for _, Sickle in next, Sickles do
+                    firetouchinterest(Sickle, Part, 0)
+                    firetouchinterest(Sickle, Part, 1)
+                end
+            end
+        end
+    end
+end
+
+--// Get Kart \\--
+while true do
+    if not Karts:FindFirstChild(Player.Name) then
+        local Tool = GetTool("FarmKart")
+        local Humanoid = Player.Character and Player.Character:FindFirstChild("Humanoid")
+        if Humanoid and Humanoid.Health <= 0 then
+            RemoteEvent:FireServer("Respawn")
+        elseif Tool then
+            Tool:Activate()
+        else
+            BuyKart:Sit(Player.Character.Humanoid)
+        end
+    else
+        UseKart(Karts[Player.Name])
+    end
+    task.wait(2.5)
+end
                     if wksp.Stores.FishingNet.CustomerSeats:FindFirstChild("2") == nil and wksp.Stores.FishingNet.Buttons:FindFirstChild("2") and lplr.leaderstats.Money.Value >= 100 and rep.Approval.Value >= 40 then
                         lplr.Character.Humanoid.Jump = true
                         wait(1)
