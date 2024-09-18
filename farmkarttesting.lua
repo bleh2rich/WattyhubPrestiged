@@ -1,3 +1,14 @@
+--// Services \\--
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+--// Variables \\--
+local Player = Players.LocalPlayer
+local BuyKart = Workspace:WaitForChild("BarbStores"):WaitForChild("FarmKart"):WaitForChild("CustomerSeat")
+local Karts = Workspace:WaitForChild("Karts")
+local RiceFolder = Workspace:WaitForChild("Rice")
+local RemoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 
 function GetRice()
     for _, Rice in next, RiceFolder:GetChildren() do
