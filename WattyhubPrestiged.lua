@@ -2129,6 +2129,19 @@ Frame:AddButton("Framed Player Is OWNER", function()
         plrheadgui.Status.Text = "GOD"
     end
 end)
+Frame:AddInput('FakeMoney', {
+    Default = 'Enter Amount Here',
+    Numeric = true,
+    Finished = false,
+
+    Text = 'Money Spoofer',
+    Tooltip = 'Spoof your money clientsidedly',
+
+    Placeholder = 'Enter Amount Of Money Here',
+})
+Options.FakeMoney:OnChanged(function()
+    game:GetService("Players").LocalPlayer.leaderstats.Money.Value = FakeMoney
+end)
 
 
 uiTheme:SetLibrary(ui)
