@@ -1,4 +1,4 @@
-<h1 align="center"> Wattyhub Prestgied </h1> 
+<h1 align="center"> Wattyhub Prestiged </h1> 
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/A64uSZ5.png"width="550"> </kbd><br><br>
 
 
