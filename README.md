@@ -46,6 +46,10 @@
 
 
 - A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
+
+- View players GUI accessible at all times
+
+- Add Infinite Yield button into the GUI
 ```
 
 
