@@ -31,14 +31,14 @@ Shadow.Parent = ScreenGui
 Shadow.Size = UDim2.new(0, 160, 0, 210)
 Shadow.Position = UDim2.new(0.5, -80, 0.5, -105)
 Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Shadow.BackgroundTransparency = 0.8 -- More transparent shadow
+Shadow.BackgroundTransparency = 0.8
 Shadow.BorderSizePixel = 0
 
 -- Background Frame
 Frame.Parent = ScreenGui
-Frame.Size = UDim2.new(0, 150, 0, 200) -- Frame size with space for button and topbar
-Frame.Position = UDim2.new(0.5, -75, 0.5, -100) -- Center of screen
-Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45) -- Vibrant dark gray
+Frame.Size = UDim2.new(0, 150, 0, 200)
+Frame.Position = UDim2.new(0.5, -75, 0.5, -100)
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
 Frame.BorderSizePixel = 0
 
 -- Smooth Rounded Corners for the Frame
@@ -47,53 +47,53 @@ UICorner.CornerRadius = UDim.new(0, 15)
 
 -- TopBar for dragging
 TopBar.Parent = Frame
-TopBar.Size = UDim2.new(1, 0, 0, 30) -- Top bar size
-TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Darker vibrant gray
+TopBar.Size = UDim2.new(1, 0, 0, 30)
+TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TopBar.BorderSizePixel = 0
 
 -- Title on TopBar
 Title.Parent = TopBar
 Title.Size = UDim2.new(1, 0, 1, 0)
 Title.BackgroundTransparency = 1
-Title.Text = "Autofarm Control"
+Title.Text = "Fixed By Dood3"
 Title.TextColor3 = Color3.new(1, 1, 1)
-Title.Font = Enum.Font.SourceSansBold
+Title.Font = Enum.Font.Cartoon
 Title.TextScaled = true
 
 -- Circular Toggle Button
 ToggleButton.Parent = Frame
 ToggleButton.Size = UDim2.new(0, 100, 0, 100)
-ToggleButton.Position = UDim2.new(0.5, -50, 0.5, -50) -- Center of the frame
-ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Initially vibrant red (OFF)
+ToggleButton.Position = UDim2.new(0.5, -50, 0.55, -50) -- Centered in the lower gray area
+ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 ToggleButton.Text = "OFF"
-ToggleButton.TextColor3 = Color3.new(1, 1, 1)
-ToggleButton.Font = Enum.Font.SourceSansBold
+ToggleButton.TextColor3 = Color3.new(255, 255, 255)
+ToggleButton.Font = Enum.Font.Cartoon
 ToggleButton.TextScaled = true
 ToggleButton.BorderSizePixel = 0
 
 -- Limit the Text Size in Toggle Button
 TextSizeConstraint.Parent = ToggleButton
-TextSizeConstraint.MaxTextSize = 20 -- Smaller text for the button
+TextSizeConstraint.MaxTextSize = 20
 
 UICorner.Parent = ToggleButton
-UICorner.CornerRadius = UDim.new(1, 0) -- Makes the button circular
+UICorner.CornerRadius = UDim.new(1, 0)
 
--- Shadow Effect behind the Button
+-- Shadowy Fade Behind the Button
 local ButtonShadow = Instance.new("Frame")
 ButtonShadow.Parent = Frame
-ButtonShadow.Size = ToggleButton.Size + UDim2.new(0, 10, 0, 10) -- Slightly larger shadow
-ButtonShadow.Position = UDim2.new(0.5, -55, 0.5, -55)
-ButtonShadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-ButtonShadow.BackgroundTransparency = 0.6
+ButtonShadow.Size = ToggleButton.Size + UDim2.new(0, 20, 0, 20)
+ButtonShadow.Position = ToggleButton.Position - UDim2.new(0, 10, 0, 10)
+ButtonShadow.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ButtonShadow.BackgroundTransparency = 0.5
 ButtonShadow.BorderSizePixel = 0
-ButtonShadow.ZIndex = ToggleButton.ZIndex - 1 -- Ensure the shadow is behind
+ButtonShadow.ZIndex = ToggleButton.ZIndex - 1
 
 -- Dragging Logic
 local dragging = false
 local dragStart
 local startPos
 
-TopBar.InputBegan:Connect(function(input)
+Frame.InputBegan:Connect(function(input)
     if input.UserInputType == Enum.UserInputType.MouseButton1 then
         dragging = true
         dragStart = input.Position
@@ -101,7 +101,7 @@ TopBar.InputBegan:Connect(function(input)
     end
 end)
 
-TopBar.InputChanged:Connect(function(input)
+Frame.InputChanged:Connect(function(input)
     if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
         local delta = input.Position - dragStart
         Frame.Position = UDim2.new(
@@ -110,7 +110,7 @@ TopBar.InputChanged:Connect(function(input)
             startPos.Y.Scale,
             startPos.Y.Offset + delta.Y
         )
-        Shadow.Position = Frame.Position + UDim2.new(0, -5, 0, -5) -- Move the shadow with the frame
+        Shadow.Position = Frame.Position + UDim2.new(0, -5, 0, -5)
     end
 end)
 
@@ -187,8 +187,85 @@ ToggleButton.MouseButton1Click:Connect(function()
     if AutofarmEnabled then
         ToggleButton.Text = "ON"
         ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Vibrant green for ON
+        ButtonShadow.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Green shadow for ON
+        if not AutofarmThread then
+            AutofarmThread = task.spawn(Autofarm)
+        end
     else
         ToggleButton.Text = "OFF"
         ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Vibrant red for OFF
+        ButtonShadow.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red shadow for OFF
+        AutofarmEnabled = false
+        AutofarmThread = nil
     end
+end)
+
+--// Close GUI Button \\--
+local CloseButton = Instance.new("TextButton")
+CloseButton.Parent = ScreenGui
+CloseButton.Size = UDim2.new(0, 120, 0, 40)
+CloseButton.Position = UDim2.new(0, 15, 0.55, 0) -- Middle left
+CloseButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+CloseButton.BackgroundTransparency = 0.5
+CloseButton.Text = "Close GUI"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.Font = Enum.Font.Cartoon
+CloseButton.TextScaled = true
+CloseButton.BorderSizePixel = 0
+
+-- Shadow effect for Close Button
+local CloseButtonShadow = Instance.new("Frame")
+CloseButtonShadow.Parent = ScreenGui
+CloseButtonShadow.Size = CloseButton.Size + UDim2.new(0, 10, 0, 10)
+CloseButtonShadow.Position = CloseButton.Position - UDim2.new(0, 5, 0, 5)
+CloseButtonShadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+CloseButtonShadow.BackgroundTransparency = 0.6
+CloseButtonShadow.BorderSizePixel = 0
+CloseButtonShadow.ZIndex = CloseButton.ZIndex - 1
+
+-- Increase the font size for the Close GUI button
+local CloseButtonTextSizeConstraint = Instance.new("UITextSizeConstraint")
+CloseButtonTextSizeConstraint.Parent = CloseButton
+CloseButtonTextSizeConstraint.MaxTextSize = 24
+
+-- Function to close the GUI and remove the shadow
+CloseButton.MouseButton1Click:Connect(function()
+    ScreenGui:Destroy()
+end)
+
+--// Hide GUI Button \\--
+local HideButton = Instance.new("TextButton")
+HideButton.Parent = ScreenGui
+HideButton.Size = UDim2.new(0, 120, 0, 40)
+HideButton.Position = UDim2.new(0, 15, 0.67, 0) -- Below Close Button
+HideButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+HideButton.BackgroundTransparency = 0.5
+HideButton.Text = "Hide GUI"
+HideButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideButton.Font = Enum.Font.Cartoon
+HideButton.TextScaled = true
+HideButton.BorderSizePixel = 0
+
+-- Shadow effect for Hide Button
+local HideButtonShadow = Instance.new("Frame")
+HideButtonShadow.Parent = ScreenGui
+HideButtonShadow.Size = HideButton.Size + UDim2.new(0, 10, 0, 10)
+HideButtonShadow.Position = HideButton.Position - UDim2.new(0, 5, 0, 5)
+HideButtonShadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+HideButtonShadow.BackgroundTransparency = 0.6
+HideButtonShadow.BorderSizePixel = 0
+HideButtonShadow.ZIndex = HideButton.ZIndex - 1
+
+-- Increase the font size for the Hide GUI button
+local HideButtonTextSizeConstraint = Instance.new("UITextSizeConstraint")
+HideButtonTextSizeConstraint.Parent = HideButton
+HideButtonTextSizeConstraint.MaxTextSize = 24
+
+-- Function to hide/show the GUI
+local GUIVisible = true
+HideButton.MouseButton1Click:Connect(function()
+    GUIVisible = not GUIVisible
+    Frame.Visible = GUIVisible
+    Shadow.Visible = GUIVisible
+    HideButton.Text = GUIVisible and "Hide GUI" or "Open GUI"
 end)
