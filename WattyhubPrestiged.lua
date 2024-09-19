@@ -2140,7 +2140,7 @@ Frame:AddInput('FakeMoney', {
     Placeholder = 'Enter Amount Of Money Here',
 })
 Options.FakeMoney:OnChanged(function()
-    game:GetService("Players").LocalPlayer.leaderstats.Money.Value = FakeMoney
+    game:GetService("Players").LocalPlayer.leaderstats.Money.Value = Options.FakeMoney.Value
 end)
 
 
