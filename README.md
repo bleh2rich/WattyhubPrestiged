@@ -1,5 +1,9 @@
-<h1 align="center"> Wattyhub Prestiged </h1> 
-<p align= "center"> <kbd> <img  src="https://i.imgur.com/A64uSZ5.png"width="550"> </kbd><br><br>
+<h1 align="center">✨ Wattyhub Prestiged 🎉</h1> 
+<p align="center">
+    <a href="https://www.youtube.com/watch?v=iB9zhk909x0" target="_blank">
+        <img src="https://i.imgur.com/A64uSZ5.png" width="550" alt="Showcase video" title="Showcase video">
+    </a>
+</p>
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
  
 > 🔥 NEW EASY CRIMINAL ESCAPE
