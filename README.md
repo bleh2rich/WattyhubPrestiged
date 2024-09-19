@@ -21,22 +21,19 @@ Soon to be added will be listed below
 5 - An updated ESP library due to the old one being used not being the best but still functioning
 
 
-6 - A money spoofer just for fun
+6 - A Autobuy food when your hunger gets low to make sure you dont starve even if you're paying attention
 
 
-7 - A Autobuy food when your hunger gets low to make sure you dont starve even if you're paying attention
+7 - A bypassed working noclip
 
 
-8 - A bypassed working noclip
+8 - Auto leader stats which you will type the wage and tax rate and food price you want when you're leader or if you're already leader it'll change the stats for you automatically instead of you taking ages to change them
 
 
-9 - Auto leader stats which you will type the wage and tax rate and food price you want when you're leader or if you're already leader it'll change the stats for you automatically instead of you taking ages to change them
+9 - Automated infinite leader which will automate the infinite leader glitch for you though this might or might not be possible
 
 
-10 - Automated infinite leader which will automate the infinite leader glitch for you though this might or might not be possible
+10 - A tab that will contain the 3rd feature and also allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
 
 
-11 - A tab that will contain the 3rd feature and also allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
-
-
-12 - A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
+11 - A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
