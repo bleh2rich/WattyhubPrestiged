@@ -19,6 +19,12 @@
 
 > 🔥 TIME SPOOFER ADDED
 
+> 🔥 CLOUD TELEPORT ADDED
+
+> 🔥 CUSTOM TITLE NAME & COLOR ADDED
+
+> 🔥 FIXED 2 MAJORS BUGS  
+
 - <a href="https://www.youtube.com/@PrestigedDev">Official WattyHub Prestiged Developer</a>
 - <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
 - Loadstring
