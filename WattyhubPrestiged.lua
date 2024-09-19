@@ -1533,32 +1533,13 @@ Options.autoFishies:OnChanged(function()
 end)
 
 local Farmkart = Tabs.Farming:AddLeftGroupbox("Farmkart Exploits")
-Farmkart:AddToggle('autoFarmkart', {
-    Text = 'Auto Farmkart + ',
-    Default = false,
-    Tooltip = 'Automatically farms rice with bonus features',
-})
-Toggles.autoFarmkart:OnChanged(function()
-    autofarmkart = Toggles.autoFarmkart.Value
-    if autofarmkart then
-        local GC = getconnections or get_signal_cons -- Gets the connections
-        if GC then
-            for i,v in pairs(GC(lplr.Idled)) do -- Disables the connections
-                if v["Disable"] then
-                    v["Disable"](v)
-                elseif v["Disconnect"] then
-                    v["Disconnect"](v)
-                end
-            end
-        else
-            lplr.Idled:Connect(function() -- If no connections then activates [manual] afk
-                local VirtualUser = game:GetService("VirtualUser")
-                VirtualUser:CaptureController()
-                VirtualUser:ClickButton2(Vector2.new())
-            end)
-        end
-    end
+
+Farmkart:AddButton("Auto Farmkart + FIXED BY DOOD3 ", function()
+        
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/farmkarttesting.lua"))()
+        
 end)
+
 Farmkart:AddToggle('birdEyeView', {
     Text = 'Birds Eye View',
     Default = false,
