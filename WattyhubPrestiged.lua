@@ -2112,13 +2112,13 @@ Frame:AddButton("Framed Player Is MOD", function()
     if CheckPlayer(lplr) and lplr.Character.HumanoidRootPart:FindFirstChild("HeadGui") then
         local plrheadgui = lplr.Character.HumanoidRootPart.HeadGui
         plrheadgui.Status.TextColor3 = Color3.fromRGB(52, 119, 76)
-        plrheadgui.Status.Text = "MOD"
+        plrheadgui.Status.Text = "Mod"
     end
 end)
 Frame:AddButton("Framed Player Is ADMIN", function()
     if CheckPlayer(lplr) and lplr.Character.HumanoidRootPart:FindFirstChild("HeadGui") then
         local plrheadgui = lplr.Character.HumanoidRootPart.HeadGui
-        plrheadgui.Status.TextColor3 = Color3.fromRGB(239, 184, 56)
+        plrheadgui.Status.TextColor3 = Color3.fromRGB(255, 0, 0)
         plrheadgui.Status.Text = "ADMIN"
     end
 end)
