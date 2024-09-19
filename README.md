@@ -5,10 +5,19 @@
     </a>
 </p>
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
- 
+
+- 09/19/2024 UPDATE LOG
 > 🔥 NEW EASY CRIMINAL ESCAPE
 
-> 🔥 SPECTATING GUI ADDING SOON
+> 🔥 SPECTATING GUI ADDED
+
+> 🔥 PANIC BUTTON ADDED
+
+> 🔥 INFINITE YIELD BUTTON ADDED
+
+> 🔥 ADVERTISEMENT BUTTON ADDED
+
+> 🔥 TIME SPOOFER ADDED
 
 - <a href="https://www.youtube.com/@PrestigedDev">Official WattyHub Prestiged Developer</a>
 - <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
@@ -28,9 +37,6 @@
 
 
 - Auto eat food when nearing hunger
-
-
-- Spectate UI available whenever
 
 
 - Cant drown
@@ -58,11 +64,6 @@
 
 
 - A tab that will contain the 3rd feature and also allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
-
-
-- A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
-
-- Add Infinite Yield button into the GUI
 ```
 
 
