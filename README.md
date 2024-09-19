@@ -47,3 +47,8 @@
 
 - A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
 ```
+
+
+```
+Need Help? Contact Bl_h On Discord
+```
