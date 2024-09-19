@@ -2,17 +2,17 @@
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/A64uSZ5.png"width="550"> </kbd><br><br>
 
 
-
+- <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
 - Loadstring
 ```
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
 ```
 
-Notes: When teleporting if the teleport doesnt go through due to there being no seat and your inputs start being delayed just pull out your punch tool and punch once itll fix the delay rather than waiting 10-20 seconds
+> Notes: When teleporting if the teleport doesnt go through due to there being no seat and your inputs start being delayed just pull out your punch tool and punch once itll fix the delay rather than waiting 10-20 seconds
 
-WattyhubPrestiged is the continued version of Wattyhub for the few GRG exploiters left I will be adding onto this as I feel alongside saying what will be added next
+> WattyhubPrestiged is the continued version of Wattyhub for the few GRG exploiters left I will be adding onto this as I feel alongside saying what will be added next
 
-Soon to be added will be listed below
+- Soon to be added will be listed below
 ```
 - Ability for any role to enter council voting
 
@@ -39,9 +39,10 @@ Soon to be added will be listed below
 
 
 - Automated infinite leader which will automate the infinite leader glitch for you though this might or might not be possible
-```
+
 
 - A tab that will contain the 3rd feature and also allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
 
 
 - A panic button in the player tab which will be bindable if I can get it bindable to where whenever you click the binded key near death itll take you somewhere private instantly hopefully saving you from near death
+```
