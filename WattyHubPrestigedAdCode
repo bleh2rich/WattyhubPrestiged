@@ -1,0 +1,3 @@
+local generalChannel = game:GetService("TextChatService"):WaitForChild("TextChannels").RBXGeneral
+ 
+generalChannel:SendAsync('Wattyhub Prestiged Is The Best GRG Script Ever!!!!!!')
