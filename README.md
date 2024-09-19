@@ -7,7 +7,7 @@
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
 
 - 09/19/2024 UPDATE LOG
-> 🔥 NEW EASY CRIMINAL ESCAPE
+> 🔥 EASY CRIMINAL ADDED
 
 > 🔥 SPECTATING GUI ADDED
 
