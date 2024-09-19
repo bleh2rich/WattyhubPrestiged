@@ -14,27 +14,41 @@ local RemoteEvent = ReplicatedStorage:WaitForChild("RemoteEvent")
 local AutofarmEnabled = false
 local AutofarmThread
 
---// Create Draggable UI with TopBar and Background \\--
+--// Create Draggable UI with TopBar, Background, and Shadow \\--
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
+local Shadow = Instance.new("Frame")
 local TopBar = Instance.new("Frame")
 local ToggleButton = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
 local Title = Instance.new("TextLabel")
+local TextSizeConstraint = Instance.new("UITextSizeConstraint")
 
 ScreenGui.Parent = Player:WaitForChild("PlayerGui")
+
+-- Shadow Effect behind the Frame
+Shadow.Parent = ScreenGui
+Shadow.Size = UDim2.new(0, 160, 0, 210)
+Shadow.Position = UDim2.new(0.5, -80, 0.5, -105)
+Shadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Shadow.BackgroundTransparency = 0.8 -- More transparent shadow
+Shadow.BorderSizePixel = 0
 
 -- Background Frame
 Frame.Parent = ScreenGui
 Frame.Size = UDim2.new(0, 150, 0, 200) -- Frame size with space for button and topbar
 Frame.Position = UDim2.new(0.5, -75, 0.5, -100) -- Center of screen
-Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- Slightly grayed background
-Frame.BackgroundTransparency = 0.3 -- Transparency for the background
+Frame.BackgroundColor3 = Color3.fromRGB(45, 45, 45) -- Vibrant dark gray
+Frame.BorderSizePixel = 0
+
+-- Smooth Rounded Corners for the Frame
+UICorner.Parent = Frame
+UICorner.CornerRadius = UDim.new(0, 15)
 
 -- TopBar for dragging
 TopBar.Parent = Frame
 TopBar.Size = UDim2.new(1, 0, 0, 30) -- Top bar size
-TopBar.BackgroundColor3 = Color3.fromRGB(40, 40, 40) -- Darker color for the top bar
+TopBar.BackgroundColor3 = Color3.fromRGB(30, 30, 30) -- Darker vibrant gray
 TopBar.BorderSizePixel = 0
 
 -- Title on TopBar
@@ -50,16 +64,31 @@ Title.TextScaled = true
 ToggleButton.Parent = Frame
 ToggleButton.Size = UDim2.new(0, 100, 0, 100)
 ToggleButton.Position = UDim2.new(0.5, -50, 0.5, -50) -- Center of the frame
-ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Initially red (OFF)
+ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Initially vibrant red (OFF)
 ToggleButton.Text = "OFF"
 ToggleButton.TextColor3 = Color3.new(1, 1, 1)
 ToggleButton.Font = Enum.Font.SourceSansBold
 ToggleButton.TextScaled = true
+ToggleButton.BorderSizePixel = 0
+
+-- Limit the Text Size in Toggle Button
+TextSizeConstraint.Parent = ToggleButton
+TextSizeConstraint.MaxTextSize = 20 -- Smaller text for the button
 
 UICorner.Parent = ToggleButton
 UICorner.CornerRadius = UDim.new(1, 0) -- Makes the button circular
 
---// Dragging Logic \\--
+-- Shadow Effect behind the Button
+local ButtonShadow = Instance.new("Frame")
+ButtonShadow.Parent = Frame
+ButtonShadow.Size = ToggleButton.Size + UDim2.new(0, 10, 0, 10) -- Slightly larger shadow
+ButtonShadow.Position = UDim2.new(0.5, -55, 0.5, -55)
+ButtonShadow.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ButtonShadow.BackgroundTransparency = 0.6
+ButtonShadow.BorderSizePixel = 0
+ButtonShadow.ZIndex = ToggleButton.ZIndex - 1 -- Ensure the shadow is behind
+
+-- Dragging Logic
 local dragging = false
 local dragStart
 local startPos
@@ -81,6 +110,7 @@ TopBar.InputChanged:Connect(function(input)
             startPos.Y.Scale,
             startPos.Y.Offset + delta.Y
         )
+        Shadow.Position = Frame.Position + UDim2.new(0, -5, 0, -5) -- Move the shadow with the frame
     end
 end)
 
@@ -156,13 +186,9 @@ ToggleButton.MouseButton1Click:Connect(function()
     AutofarmEnabled = not AutofarmEnabled
     if AutofarmEnabled then
         ToggleButton.Text = "ON"
-        ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Green for ON
-        AutofarmThread = task.spawn(Autofarm)
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- Vibrant green for ON
     else
         ToggleButton.Text = "OFF"
-        ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Red for OFF
-        if AutofarmThread then
-            task.cancel(AutofarmThread)
-        end
+        ToggleButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- Vibrant red for OFF
     end
 end)
