@@ -69,7 +69,7 @@
 - Automated infinite leader which will automate the infinite leader glitch for you though this might or might not be possible
 
 
-- A tab that will contain the 3rd feature and also allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
+- A tab that will allow you to buy every buyable thing on the map making it much easier to get around and buy whatever is needed
 ```
 
 
