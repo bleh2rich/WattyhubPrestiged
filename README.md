@@ -1,6 +1,6 @@
 <h1 align="center"> Wattyhub Prestiged </h1> 
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/A64uSZ5.png"width="550"> </kbd><br><br>
-
+<p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
 > 🔥 NEW EASY CRIMINAL ESCAPE
 
 > 🔥 SPECTATING GUI ADDING SOON
