@@ -1536,7 +1536,7 @@ local Farmkart = Tabs.Farming:AddLeftGroupbox("Farmkart Exploits")
 
 Farmkart:AddButton("Auto Farmkart + FIXED BY DOOD3 ", function()
         
-loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/farmkarttesting.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/FarmKartGUI.lua"))()
         
 end)
 
