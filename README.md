@@ -27,7 +27,12 @@
 - Ability for any role to enter council voting
 
 
-- Auto escape prison
+- Auto eat food when nearing hunger
+
+
+- Spectate UI available whenever
+
+- Cant drown
 
 
 - A tab dedicated to every singular tool buy (that will function only if that tool is bought)
