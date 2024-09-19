@@ -49,6 +49,6 @@
 ```
 
 
-```
-Need Help? Contact Bl_h On Discord
-```
+
+> Need Help? Contact Bl_h On Discord
+
