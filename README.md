@@ -42,6 +42,7 @@
 
 > Notes: When teleporting if the teleport doesnt go through due to there being no seat and your inputs start being delayed just pull out your punch tool and punch once itll fix the delay rather than waiting 10-20 seconds
 
+> NEED A EXECUTOR? USE https://getsolara.dev FOR PC OR APPLEWARE FOR IPHONES OR ARCEUS X FOR ANDROID
 
 - Soon to be added will be listed below
 ```
