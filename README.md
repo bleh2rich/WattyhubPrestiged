@@ -42,6 +42,9 @@
 - Ability for any role to enter council voting
 
 
+- Make player spoofing fully spoof display name and leader stats user
+
+
 - Leader exploits, View leader approval, Autoboy etc
 
 
