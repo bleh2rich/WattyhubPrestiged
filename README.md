@@ -42,6 +42,9 @@
 - Ability for any role to enter council voting
 
 
+- Leader exploits, View leader approval, Autoboy etc
+
+
 - Auto eat food when nearing hunger
 
 
