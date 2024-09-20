@@ -23,7 +23,13 @@
 
 > 🔥 CUSTOM TITLE NAME & COLOR ADDED
 
-> 🔥 FIXED 2 MAJORS BUGS  
+> 🔥 FIXED 2 MAJORS BUGS
+
+> 🔥 DISABLE ANTI SHIFTLOCK
+
+> 🔥 MADE PLAYER FRAMING BETTER
+
+> 🔥 ADDED CLOUD BOARD IN FUN TAB
 
 - <a href="https://www.youtube.com/@PrestigedDev">Official WattyHub Prestiged Developer</a>
 - <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
