@@ -48,6 +48,9 @@
 - Ability for any role to enter council voting
 
 
+- Add more fun stuff, Custom houses, Blobs of rice, Raining rice
+
+
 - Make Android support (#1 Priority)
 
 
