@@ -38,9 +38,15 @@
 
 - <a href="https://www.youtube.com/@PrestigedDev">Official WattyHub Prestiged Developer</a>
 - <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
-- Loadstring
+- Loadstring MAIN WATTYHUB
 ```
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
+```
+
+- Loadstring OPTIMIZED WATTY HUB (USE IF EXECUTOR CRASHES UPON EXECUTION OR FRAMES DROP TREMENDOUSLY)
+
+```
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestigedOptimized/OptimizedWattyhub.lua'),true))()
 ```
 
 - Android Loadstring
