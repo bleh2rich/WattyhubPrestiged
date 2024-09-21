@@ -61,9 +61,9 @@
 > Notes: When teleporting if the teleport doesnt go through due to there being no seat and your inputs start being delayed just pull out your punch tool and punch once itll fix the delay rather than waiting 10-20 seconds
 
 > NEED A EXECUTOR?
-> PC EXECUTORS FREE: https://discord.com/invite/getathena , https://getsolara.dev ATHENA IS RECOMMEND THE MOST
+> PC EXECUTOR(S) FREE: https://getsolara.dev
 > IOS EXECUTORS: https://codex.lol/ , https://appleware.dev
-> ANDROID EXECUTORS: https://codex.lol/
+> ANDROID EXECUTOR(S): https://codex.lol/
 
 - Soon to be added will be listed below
 ```
