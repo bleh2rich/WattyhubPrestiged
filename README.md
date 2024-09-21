@@ -5,6 +5,11 @@
     </a>
 </p>
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
+- 09/20/2024 UPDATE LOG
+
+    
+# >> 🔥 ANDROID/MOBILE SUPPORT ADDED THE MOST USED FEATURES HAVE BEEN PORTED AND IT WILL RECEIVE UPDATES 🔥 <<
+
 
 - 09/19/2024 UPDATE LOG
 > 🔥 EASY CRIMINAL ADDED
@@ -37,6 +42,13 @@
 ```
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
 ```
+
+- Android Loadstring
+
+```
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/AndroidWattyhubPrestiged/WattyHubPrestigedAndroid.lua'),true))()
+```
+
 ``` Recontinued by Dood3 AKA Bleh2rich or Blehgetsnogirls ```
 > Wattyhub Prestiged is the continued version of Wattyhub for the few GRG exploiters left I will be adding onto this as I feel alongside saying what will be added next
 
