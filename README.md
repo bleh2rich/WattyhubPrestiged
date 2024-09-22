@@ -43,6 +43,12 @@
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
 ```
 
+- Loadstring WATTY HUB CALIBRI EDITION
+
+```
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/Calibri/WattyhubPrestigedCalibri.lua'),true))()
+```
+
 - Loadstring OPTIMIZED WATTY HUB (USE IF EXECUTOR CRASHES UPON EXECUTION OR FRAMES DROP TREMENDOUSLY)
 
 ```
