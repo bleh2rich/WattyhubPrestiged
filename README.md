@@ -7,7 +7,7 @@
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
 
 
-# DISCORD INVITE LINK > https://discord.gg/zbgRZxNRKa <
+# DISCORD INVITE > https://discord.gg/zbgRZxNRKa <
     
 # >> 🔥 ANDROID/MOBILE SUPPORT ADDED THE MOST USED FEATURES HAVE BEEN PORTED AND IT WILL RECEIVE UPDATES 🔥 <<
 
