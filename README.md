@@ -6,7 +6,7 @@
 </p>
 <p align= "center"> <kbd> <img  src="https://i.imgur.com/dZhpVgA.png"width="750"> </kbd><br><br>
 - 09/20/2024 UPDATE LOG
-
+# DISCORD INVITE LINK >> discord.gg/zbgRZxNRKa <<
     
 # >> 🔥 ANDROID/MOBILE SUPPORT ADDED THE MOST USED FEATURES HAVE BEEN PORTED AND IT WILL RECEIVE UPDATES 🔥 <<
 
