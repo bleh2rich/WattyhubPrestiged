@@ -41,6 +41,17 @@
 
 - <a href="https://www.youtube.com/@PrestigedDev">Official WattyHub Prestiged Developer</a>
 - <a href="https://www.youtube.com/@wattyville5476">Credits To The Original Maker Of Wattyhub</a>
+- Loadstring WATTYHUB LOADER
+```
+ loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubLoader.lua'),true))()
+```
+
+
+
+
+
+> Specific Wattyhub Versions
+
 - Loadstring MAIN WATTYHUB
 ```
  loadstring(game:HttpGet(('https://raw.githubusercontent.com/bleh2rich/WattyhubPrestiged/main/WattyhubPrestiged.lua'),true))()
